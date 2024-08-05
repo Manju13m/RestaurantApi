@@ -1,0 +1,61 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="homepage">
+    <div class="overlay"></div>
+    <div class="welcome-message text-center text-white">
+        <h1>Welcome to Trupthi Restaurant</h1>
+        <p class="quotation">"Food is a basic necessity of life. Every meal we consume is a gift, and wasting it is a disservice to the countless hands that brought it to our table. Let's cherish our food, share with those in need, and strive for a world where no one goes hungry."</p>
+    </div>
+</div>
+
+<style>
+    html, body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .homepage {
+        position: relative;
+        width: 100%;
+        min-height: 100vh;
+        background: url('https://wallpapercave.com/wp/wp1874173.jpg') no-repeat center center fixed;
+        background-size: cover; /* Ensure the background image covers the entire container */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+    }
+
+    .welcome-message {
+        position: relative;
+        z-index: 2;
+        max-width: 800px;
+        padding: 20px;
+        text-align: center;
+    }
+
+        .welcome-message h1 {
+            font-size: 3.5em;
+            margin-bottom: 20px;
+            color: #ff9900; /* Custom color for the heading */
+        }
+
+        .welcome-message .quotation {
+            font-size: 1.5em;
+            font-style: italic;
+            color: #ffffff; /* Custom color for the paragraph */
+            margin-bottom: 30px;
+        }
+</style>  

@@ -1,0 +1,125 @@
+﻿
+@model RestaurantMvc.Models.ViewModels.AddBookRequest
+
+@{
+    ViewData["Title"] = "Book a Table";
+    var minDate = DateTime.Now.ToString("yyyy-MM-dd");
+    var maxDate = DateTime.Now.AddDays(3).ToString("yyyy-MM-dd");
+    var minTime = "11:00";
+    var maxTime = "23:00";
+
+
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.3/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.min.js"></script>
+
+</head>
+
+<body>
+    <div class="container">
+        <h2 class="mb-4">Book a Table</h2>
+
+
+
+
+        <form asp-controller="Booking" asp-action="Book" method="post">
+
+            <div class="form-group">
+                <label asp-for="UserId">User ID</label>
+                <input asp-for="UserId" class="form-control" readonly /> <!-- Display UserId as readonly -->
+                <span asp-validation-for="UserId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CustomerName" class="control-label">Your Name</label>
+                <input asp-for="CustomerName" class="form-control" type="text" required />
+                <span asp-validation-for="CustomerName" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="BookingDate" class="control-label">Booking Date</label>
+                <input asp-for="BookingDate" class="form-control" type="date" min="@minDate" max="@maxDate" required asp-format="{0:dd-MM-yyyy}" />
+                <span asp-validation-for="BookingDate" class="text-danger"></span>
+            </div>
+
+
+
+            <div class="form-group">
+                <label asp-for="FromTime" class="control-label">From Time</label>
+                <input asp-for="FromTime" class="form-control" type="time" min="@minTime" max="@maxTime" required />
+                <span asp-validation-for="FromTime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ToTime" class="control-label">To Time</label>
+                <input asp-for="ToTime" class="form-control" type="time" min="@minTime" max="@maxTime" required />
+                <span asp-validation-for="ToTime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TableNumber" class="control-label">Table Number</label>
+                <select asp-for="TableNumber" class="form-control" required>
+                    <option value="">Select Table Number</option>
+                    @for (int i = 1; i <= 8; i++)
+                    {
+                        <option value="@i">@i</option>
+                    }
+                </select>
+                <span asp-validation-for="TableNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary btn-block">Book</button>
+            </div>
+        </form>
+    </div>
+
+    @if (ViewBag.ConflictMessage != null)
+    {
+        <script>
+            $(document).ready(function () {
+                alert('@Html.Raw(ViewBag.ConflictMessage)');
+            });
+        </script>
+    }
+
+</body>
+</html>
+
+<style>
+    body {
+        background-color: #f8f9fa; /* Light background color */
+        padding-top: 20px;
+    }
+
+    .container {
+        max-width: 600px; /* Limit width for content */
+    }
+
+    .form-group {
+        margin-bottom: 20px; /* Space between form groups */
+    }
+
+    .btn-primary {
+        background-color: #007bff; /* Primary button color */
+        border-color: #007bff;
+        padding: 8px 16px; /* Adjust padding for smaller button */
+        font-size: 1rem; /* Adjust font size */
+    }
+
+        .btn-primary:hover {
+            background-color: #0056b3; /* Darker hover color */
+            border-color: #0056b3;
+        }
+
+</style>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
