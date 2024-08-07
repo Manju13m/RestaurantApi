@@ -23,6 +23,7 @@ C:\Users\Manju\source\repos\RestaurantAPI\RestaurantMvc\obj\Debug\net8.0\Restaur
 C:\Users\Manju\source\repos\RestaurantAPI\RestaurantMvc\obj\Debug\net8.0\RestaurantMvc.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Manju\source\repos\RestaurantAPI\RestaurantMvc\obj\Debug\net8.0\RestaurantMvc.RazorAssemblyInfo.cache
 C:\Users\Manju\source\repos\RestaurantAPI\RestaurantMvc\obj\Debug\net8.0\RestaurantMvc.RazorAssemblyInfo.cs
+C:\Users\Manju\source\repos\RestaurantAPI\RestaurantMvc\obj\Debug\net8.0\RestaurantMvc.sourcelink.json
 C:\Users\Manju\source\repos\RestaurantAPI\RestaurantMvc\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\Manju\source\repos\RestaurantAPI\RestaurantMvc\obj\Debug\net8.0\staticwebassets.development.json
 C:\Users\Manju\source\repos\RestaurantAPI\RestaurantMvc\obj\Debug\net8.0\staticwebassets\msbuild.RestaurantMvc.Microsoft.AspNetCore.StaticWebAssets.props

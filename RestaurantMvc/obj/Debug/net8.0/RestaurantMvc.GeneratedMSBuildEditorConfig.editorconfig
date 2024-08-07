@@ -26,20 +26,12 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va2luZ1xCb29rLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Manju/source/repos/RestaurantAPI/RestaurantMvc/Views/CheckIn/CheckIn.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2hlY2tJblxDaGVja0luLmNzaHRtbA==
+[C:/Users/Manju/source/repos/RestaurantAPI/RestaurantMvc/Views/CheckInOut/CheckIn.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2hlY2tJbk91dFxDaGVja0luLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Manju/source/repos/RestaurantAPI/RestaurantMvc/Views/CheckIn/CheckInConfirmation.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2hlY2tJblxDaGVja0luQ29uZmlybWF0aW9uLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Manju/source/repos/RestaurantAPI/RestaurantMvc/Views/CheckOut/CheckOut.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2hlY2tPdXRcQ2hlY2tPdXQuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Manju/source/repos/RestaurantAPI/RestaurantMvc/Views/CheckOut/CheckOutConfirmation.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2hlY2tPdXRcQ2hlY2tPdXRDb25maXJtYXRpb24uY3NodG1s
+[C:/Users/Manju/source/repos/RestaurantAPI/RestaurantMvc/Views/CheckInOut/CheckOut.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2hlY2tJbk91dFxDaGVja091dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Manju/source/repos/RestaurantAPI/RestaurantMvc/Views/Customer/CustomerDashboard.cshtml]

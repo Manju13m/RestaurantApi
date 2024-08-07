@@ -1,0 +1,48 @@
+﻿using System;
+using Microsoft.EntityFrameworkCore.Migrations;
+
+#nullable disable
+
+namespace RestaurantAPI.Migrations
+{
+    /// <inheritdoc />
+    public partial class changes : Migration
+    {
+        /// <inheritdoc />
+        protected override void Up(MigrationBuilder migrationBuilder)
+        {
+            migrationBuilder.DropPrimaryKey(
+                name: "PK_CheckInOuts",
+                table: "CheckInOuts");
+
+            migrationBuilder.DropColumn(
+                name: "id",
+                table: "CheckInOuts");
+
+            migrationBuilder.AddPrimaryKey(
+                name: "PK_CheckInOuts",
+                table: "CheckInOuts",
+                column: "BookingId");
+        }
+
+        /// <inheritdoc />
+        protected override void Down(MigrationBuilder migrationBuilder)
+        {
+            migrationBuilder.DropPrimaryKey(
+                name: "PK_CheckInOuts",
+                table: "CheckInOuts");
+
+            migrationBuilder.AddColumn<Guid>(
+                name: "id",
+                table: "CheckInOuts",
+                type: "uniqueidentifier",
+                nullable: false,
+                defaultValue: new Guid("00000000-0000-0000-0000-000000000000"));
+
+            migrationBuilder.AddPrimaryKey(
+                name: "PK_CheckInOuts",
+                table: "CheckInOuts",
+                column: "id");
+        }
+    }
+}

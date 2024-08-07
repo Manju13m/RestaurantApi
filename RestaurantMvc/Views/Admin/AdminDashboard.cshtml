@@ -57,10 +57,10 @@
                             <td>@booking.ToTime.ToString(@"hh\:mm")</td>
                             <td>@booking.TableNumber</td>
                             <td>
-                                <a class="btn btn-primary btn-sm" asp-controller="CheckIn" asp-action="CheckIn">Check-In</a>
+                                <a class="btn btn-primary btn-sm" asp-controller="CheckInOut" asp-action="CheckIn" asp-route-bookingId="@booking.BookingId" asp-route-userId="@booking.UserId">Check-In</a>
                             </td>
                             <td>
-                                <a class="btn btn-success btn-sm" asp-controller="CheckOut" asp-action="CheckOut">Check-Out</a>
+                                <a class="btn btn-success btn-sm" asp-controller="CheckInOut" asp-action="CheckOut" asp-route-bookingId="@booking.BookingId" asp-route-userId="@booking.UserId">Check-Out</a>
                             </td>
                         </tr>
                     }

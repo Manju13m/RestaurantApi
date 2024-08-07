@@ -42,21 +42,7 @@ builder.Services.AddHttpClient("AdminApiClient", client =>
 });
 
 
-builder.Services.AddHttpClient("CheckInApiClient", client =>
-{
-    client.BaseAddress = new Uri("https://localhost:44390");
 
-    client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-});
-
-
-
-builder.Services.AddHttpClient("CheckOutApiClient", client =>
-{
-    client.BaseAddress = new Uri("https://localhost:44390");
-
-    client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-});
 
 
 builder.Services.AddHttpClient("CustomerApiClient", client =>
@@ -67,6 +53,15 @@ builder.Services.AddHttpClient("CustomerApiClient", client =>
 });
 
 builder.Services.AddHttpClient("BookingApiClient", client =>
+{
+    client.BaseAddress = new Uri("https://localhost:44390");
+
+    client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+});
+
+
+
+builder.Services.AddHttpClient("CheckInOutApiClient", client =>
 {
     client.BaseAddress = new Uri("https://localhost:44390");
 

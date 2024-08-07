@@ -123,6 +123,7 @@ C:\Users\Manju\source\repos\RestaurantAPI\RestaurantAPI\obj\Debug\net8.0\Restaur
 C:\Users\Manju\source\repos\RestaurantAPI\RestaurantAPI\obj\Debug\net8.0\RestaurantAPI.csproj.CoreCompileInputs.cache
 C:\Users\Manju\source\repos\RestaurantAPI\RestaurantAPI\obj\Debug\net8.0\RestaurantAPI.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\Manju\source\repos\RestaurantAPI\RestaurantAPI\obj\Debug\net8.0\RestaurantAPI.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Manju\source\repos\RestaurantAPI\RestaurantAPI\obj\Debug\net8.0\RestaurantAPI.sourcelink.json
 C:\Users\Manju\source\repos\RestaurantAPI\RestaurantAPI\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\Manju\source\repos\RestaurantAPI\RestaurantAPI\obj\Debug\net8.0\staticwebassets.development.json
 C:\Users\Manju\source\repos\RestaurantAPI\RestaurantAPI\obj\Debug\net8.0\staticwebassets\msbuild.RestaurantAPI.Microsoft.AspNetCore.StaticWebAssets.props

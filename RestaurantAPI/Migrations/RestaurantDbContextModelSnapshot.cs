@@ -101,47 +101,31 @@ namespace RestaurantAPI.Migrations
                     b.ToTable("Bookingdata");
                 });
 
-            modelBuilder.Entity("RestaurantAPI.Models.CheckIn", b =>
+            modelBuilder.Entity("RestaurantAPI.Models.CheckInOut", b =>
                 {
-                    b.Property<int>("CheckInId")
+                    b.Property<Guid>("BookingId")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
+                        .HasColumnType("uniqueidentifier");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("CheckInId"));
-
-                    b.Property<DateTime>("CheckInDate")
+                    b.Property<DateTime?>("CheckInDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<TimeSpan>("CheckInTime")
+                    b.Property<TimeSpan?>("CheckInTime")
                         .HasColumnType("time");
 
-                    b.Property<string>("CustomerId")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<TimeSpan?>("CheckOutTime")
+                        .HasColumnType("time");
 
-                    b.HasKey("CheckInId");
-
-                    b.ToTable("CheckIns");
-                });
-
-            modelBuilder.Entity("RestaurantAPI.Models.CheckOut", b =>
-                {
-                    b.Property<int>("CheckOutId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("CheckOutId"));
-
-                    b.Property<string>("CustomerId")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<decimal>("GrossAmount")
+                    b.Property<decimal?>("GrossAmount")
                         .HasColumnType("decimal(18,2)");
 
-                    b.HasKey("CheckOutId");
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
-                    b.ToTable("CheckOuts");
+                    b.HasKey("BookingId");
+
+                    b.ToTable("CheckInOuts");
                 });
 
             modelBuilder.Entity("RestaurantAPI.Models.Customer", b =>

@@ -20,7 +20,7 @@ namespace RestaurantMvc.Controllers
 
         public BookingController(IHttpClientFactory httpClientFactory, IEmailService emailService, ILogger<BookingController> logger)
         {
-            _httpClient = httpClientFactory.CreateClient("CheckOutApiClient");
+            _httpClient = httpClientFactory.CreateClient("BookingApiClient");
             _emailService = emailService;
             _logger = logger;
         }

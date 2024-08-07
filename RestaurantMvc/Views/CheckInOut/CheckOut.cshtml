@@ -1,0 +1,26 @@
+﻿@model RestaurantMvc.Models.ViewModels.CheckInOutViewModel
+
+<h2>Check Out</h2>
+
+<form asp-action="CheckOut" method="post">
+    <div class="form-group">
+        <label for="bookingId">Booking ID</label>
+        <input type="text" id="bookingId" name="BookingId" class="form-control" value="@Model.BookingId" readonly />
+    </div>
+    <div class="form-group">
+        <label for="userId">User ID</label>
+        <input type="text" id="userId" name="UserId" class="form-control" value="@Model.UserId" readonly />
+    </div>
+    <div class="form-group">
+        <label asp-for="CheckOutTime">Check-Out Time</label>
+        <input asp-for="CheckOutTime" class="form-control" type="time" required />
+        <span asp-validation-for="CheckOutTime" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label for="grossAmount">Gross Amount</label>
+        <input type="number" step="0.01" id="grossAmount" name="GrossAmount" class="form-control" required />
+    </div>
+    <div asp-validation-summary="All" class="text-danger"></div>
+
+    <button type="submit" class="btn btn-success">Check Out</button>
+</form>
