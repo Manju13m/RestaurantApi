@@ -12,8 +12,8 @@ using RestaurantAPI.Data;
 namespace RestaurantAPI.Migrations
 {
     [DbContext(typeof(RestaurantDbContext))]
-    [Migration("20240806111608_adding id")]
-    partial class addingid
+    [Migration("20240807150048_initial migration")]
+    partial class initialmigration
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -104,41 +104,18 @@ namespace RestaurantAPI.Migrations
                     b.ToTable("Bookingdata");
                 });
 
-            modelBuilder.Entity("RestaurantAPI.Models.CheckIn", b =>
+            modelBuilder.Entity("RestaurantAPI.Models.CheckInOut", b =>
                 {
-                    b.Property<int>("CheckInId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
+                    b.Property<string>("BookingId")
+                        .HasColumnType("nvarchar(450)");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("CheckInId"));
-
-                    b.Property<DateTime>("CheckInDate")
+                    b.Property<DateTime?>("CheckInDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<TimeSpan>("CheckInTime")
+                    b.Property<TimeSpan?>("CheckInTime")
                         .HasColumnType("time");
 
-                    b.Property<string>("CustomerId")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("CheckInId");
-
-                    b.ToTable("CheckIns");
-                });
-
-            modelBuilder.Entity("RestaurantAPI.Models.CheckInCheckOut", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<DateTime>("CheckInDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<TimeSpan>("CheckInTime")
+                    b.Property<TimeSpan?>("CheckOutTime")
                         .HasColumnType("time");
 
                     b.Property<decimal?>("GrossAmount")
@@ -148,29 +125,9 @@ namespace RestaurantAPI.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("Id");
+                    b.HasKey("BookingId");
 
-                    b.ToTable("CheckInChecks");
-                });
-
-            modelBuilder.Entity("RestaurantAPI.Models.CheckOut", b =>
-                {
-                    b.Property<int>("CheckOutId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("CheckOutId"));
-
-                    b.Property<string>("CustomerId")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<decimal>("GrossAmount")
-                        .HasColumnType("decimal(18,2)");
-
-                    b.HasKey("CheckOutId");
-
-                    b.ToTable("CheckOuts");
+                    b.ToTable("CheckInOuts");
                 });
 
             modelBuilder.Entity("RestaurantAPI.Models.Customer", b =>

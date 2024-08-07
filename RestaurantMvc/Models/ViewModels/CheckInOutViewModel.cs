@@ -2,7 +2,7 @@
 {
     public class CheckInOutViewModel
     {
-        public Guid BookingId { get; set; }
+        public string BookingId { get; set; }
         public string UserId { get; set; }
         public DateTime CheckInDate { get; set; }
         public TimeSpan CheckInTime { get; set; }

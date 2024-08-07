@@ -30,32 +30,19 @@ namespace RestaurantAPI.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "CheckIns",
+                name: "CheckInOuts",
                 columns: table => new
                 {
-                    CheckInId = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    CustomerId = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    CheckInDate = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    CheckInTime = table.Column<TimeSpan>(type: "time", nullable: false)
+                    BookingId = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    UserId = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    CheckInDate = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    CheckInTime = table.Column<TimeSpan>(type: "time", nullable: true),
+                    CheckOutTime = table.Column<TimeSpan>(type: "time", nullable: true),
+                    GrossAmount = table.Column<decimal>(type: "decimal(18,2)", nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_CheckIns", x => x.CheckInId);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "CheckOuts",
-                columns: table => new
-                {
-                    CheckOutId = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    CustomerId = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    GrossAmount = table.Column<decimal>(type: "decimal(18,2)", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_CheckOuts", x => x.CheckOutId);
+                    table.PrimaryKey("PK_CheckInOuts", x => x.BookingId);
                 });
 
             migrationBuilder.CreateTable(
@@ -117,10 +104,7 @@ namespace RestaurantAPI.Migrations
                 name: "Bookingdata");
 
             migrationBuilder.DropTable(
-                name: "CheckIns");
-
-            migrationBuilder.DropTable(
-                name: "CheckOuts");
+                name: "CheckInOuts");
 
             migrationBuilder.DropTable(
                 name: "Customerdata");

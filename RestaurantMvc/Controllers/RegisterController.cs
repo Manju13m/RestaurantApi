@@ -47,7 +47,7 @@ namespace RestaurantMvc.Controllers
                 if (addRegRequest.Role == "Customer")
                 {
                     var subject = "Welcome to Trupthi Restaurant!";
-                    var message = $"Dear {addRegRequest.FirstName},\n\nThank you for registering with Trupthi Restaurant! We are thrilled to have you as a part of our community.\n\nYour user ID is: {addRegRequest.UserId}\n\nYou can now log in to your account using this user ID and the password you created during registration.Once logged in, you can book tables,view upcoming reservations, ans mange your bookings with ease\n\nWe look forward to serving you and hope you have a delightful dining experiece with us.\n\nBest regards,\nThe Trupthi Restaurant Team";
+                    var message = $"Dear {addRegRequest.FirstName},\n\nThank you for registering with Trupthi Restaurant! We are thrilled to have you as a part of our community.\n\nYour user ID is: {addRegRequest.UserId}\n\nYou can now log in to your account using this user ID and the password you created during registration.Once logged in, you can book tables,view upcoming reservations, and mange your bookings with ease\n\nWe look forward to serving you and hope you have a delightful dining experiece with us.\n\nBest regards,\nThe Trupthi Restaurant Team";
                     await _emailService.SendEmailAsync(addRegRequest.Email, subject, message);
                 }
                 else if (addRegRequest.Role == "Admin")

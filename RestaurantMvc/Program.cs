@@ -60,13 +60,16 @@ builder.Services.AddHttpClient("BookingApiClient", client =>
 });
 
 
-
 builder.Services.AddHttpClient("CheckInOutApiClient", client =>
 {
     client.BaseAddress = new Uri("https://localhost:44390");
 
     client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 });
+
+
+
+
 
 // Add IHttpContextAccessor
 builder.Services.AddHttpContextAccessor();

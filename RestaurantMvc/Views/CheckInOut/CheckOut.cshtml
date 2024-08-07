@@ -18,7 +18,8 @@
     </div>
     <div class="form-group">
         <label for="grossAmount">Gross Amount</label>
-        <input type="number" step="0.01" id="grossAmount" name="GrossAmount" class="form-control" required />
+        <input type="number" id="grossAmount" name="GrossAmount" class="form-control" required />
+        <span asp-validation-for="GrossAmount" class="text-danger"></span>
     </div>
     <div asp-validation-summary="All" class="text-danger"></div>
 

@@ -1,10 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-
 using RestaurantMvc.email;
 using RestaurantMvc.Models.ViewModels;
 using System.Text;
 using System.Text.Json;
-
 
 namespace RestaurantMvc.Controllers
 {
@@ -19,9 +17,8 @@ namespace RestaurantMvc.Controllers
             _emailService = emailService;
         }
 
-
         [HttpGet]
-        public IActionResult CheckIn(Guid bookingId, string userId)
+        public IActionResult CheckIn(string bookingId, string userId)
         {
             var model = new CheckInOutViewModel
             {
@@ -31,7 +28,6 @@ namespace RestaurantMvc.Controllers
             return View(model);
         }
 
-
         [HttpPost]
         public async Task<IActionResult> CheckIn(CheckInOutViewModel model)
         {
@@ -40,13 +36,11 @@ namespace RestaurantMvc.Controllers
 
             try
             {
-                var response = await _httpClient.PostAsync("api/CheckInOutApi/Checkin", content);
+                var response = await _httpClient.PostAsync("/api/CheckInOutApi/Checkin", content);
 
                 if (response.IsSuccessStatusCode)
                 {
-                    // Optionally send an email notification
-                    // await _emailService.SendCheckInConfirmationEmail(model.UserId, model.BookingId);
-
+                  
                     return RedirectToAction("AdminDashboard", "Admin");
                 }
                 else
@@ -58,7 +52,7 @@ namespace RestaurantMvc.Controllers
             }
             catch (Exception ex)
             {
-                // Log the exception and show a friendly error message
+                
                 ModelState.AddModelError("", $"An error occurred: {ex.Message}");
             }
 
@@ -66,7 +60,7 @@ namespace RestaurantMvc.Controllers
         }
 
         [HttpGet]
-        public IActionResult CheckOut(Guid bookingId, string userId)
+        public IActionResult CheckOut(string bookingId, string userId)
         {
             var model = new CheckInOutViewModel
             {
@@ -79,54 +73,49 @@ namespace RestaurantMvc.Controllers
         [HttpPost]
         public async Task<IActionResult> CheckOut(CheckInOutViewModel model)
         {
+            var json = JsonSerializer.Serialize(model);
+            var content = new StringContent(json, Encoding.UTF8, "application/json");
+
             try
             {
-                // Serialize model to JSON
-                var jsonContent = new StringContent(JsonSerializer.Serialize(model), Encoding.UTF8, "application/json");
+                // Call Checkout API
+                var checkoutResponse = await _httpClient.PostAsync("/api/CheckInOutApi/Checkout", content);
 
-                // Post checkout data
-                var response = await _httpClient.PostAsync("/api/CheckInOutApi/Checkout", jsonContent);
-
-                if (response.IsSuccessStatusCode)
+                if (checkoutResponse.IsSuccessStatusCode)
                 {
-                    // Retrieve the customer's email
-                    var emailResponse = await _httpClient.GetAsync($"/api/CheckInOutApi/{model.UserId}");
-
+                    // Get customer email from API
+                    var emailResponse = await _httpClient.GetAsync($"/api/CheckInOutApi/getEmail?userId={model.UserId}");
                     if (emailResponse.IsSuccessStatusCode)
                     {
-                        var email = await emailResponse.Content.ReadAsStringAsync();
-                       // email = email.Trim();
+                        var customerEmail = await emailResponse.Content.ReadAsStringAsync();
 
-                        // Compose subject and body
-                        string subject = "Your Checkout Details";
-                        string message = $"Dear Customer,\n\nThank you for dining with us! \n\nYour gross amount for the recent visit is ₹{model.GrossAmount:N0}. \n\nWe appreciate your patronage. \n\nBest regards, \nTrupthi Restaurant";
+                        // Send email to the customer using the EmailService
+                        var subject = "Checkout Confirmation";
+                        var message = $"Dear customer, your checkout for booking ID {model.BookingId} was successful. Thank you for dining with us!";
 
-                        // Send email
-                        await _emailService.SendEmailAsync(email, subject, message);
+                        await _emailService.SendEmailAsync(customerEmail, subject, message);
 
                         return RedirectToAction("AdminDashboard", "Admin");
                     }
                     else
                     {
-                        // Handle error if email retrieval fails
                         var errorContent = await emailResponse.Content.ReadAsStringAsync();
-                        ModelState.AddModelError("", $"Failed to retrieve email: {errorContent}");
+                        ModelState.AddModelError("", $"Email error: {emailResponse.StatusCode} - {errorContent}");
                     }
                 }
                 else
                 {
-                    // Handle error response
-                    var errorContent = await response.Content.ReadAsStringAsync();
-                    ModelState.AddModelError("", $"API error: {response.StatusCode} - {errorContent}");
+                    var errorContent = await checkoutResponse.Content.ReadAsStringAsync();
+                    ModelState.AddModelError("", $"API error: {checkoutResponse.StatusCode} - {errorContent}");
                 }
             }
             catch (Exception ex)
             {
-                // Log the exception (implement logging here)
                 ModelState.AddModelError("", $"An error occurred: {ex.Message}");
             }
 
             return View(model);
         }
+
     }
 }

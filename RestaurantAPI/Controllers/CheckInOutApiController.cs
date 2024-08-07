@@ -9,13 +9,13 @@ namespace RestaurantAPI.Controllers
     [ApiController]
     public class CheckInOutApiController : Controller
     {
-
         private readonly RestaurantDbContext restaurantDbContext;
 
         public CheckInOutApiController(RestaurantDbContext restaurantDbContext)
         {
             this.restaurantDbContext = restaurantDbContext;
         }
+
 
         [HttpPost("Checkin")]
         public async Task<IActionResult> CheckIn([FromBody] CheckInOut model)
@@ -34,6 +34,7 @@ namespace RestaurantAPI.Controllers
             return Ok();
         }
 
+
         [HttpPost("Checkout")]
         public async Task<IActionResult> CheckOut([FromBody] CheckInOut model)
         {
@@ -51,24 +52,28 @@ namespace RestaurantAPI.Controllers
             restaurantDbContext.CheckInOuts.Update(checkInOut);
             await restaurantDbContext.SaveChangesAsync();
 
-            
-
             return Ok();
         }
 
-        [HttpGet("{userId}")]
-        public async Task<ActionResult<string>> GetCustomerEmailByUserId(string userId)
+
+        [HttpGet("getEmail")]
+        public async Task<ActionResult<string>> GetCustomerEmailByUserId([FromQuery] string userId)
         {
+            if (string.IsNullOrEmpty(userId))
+            {
+                return BadRequest("User ID is required.");
+            }
+
             var customer = await restaurantDbContext.Customerdata
                 .FirstOrDefaultAsync(c => c.UserId == userId);
 
             if (customer == null)
             {
-                return NotFound();
+                return NotFound("Customer not found.");
             }
 
-            // Return only the email address
-            return Ok(customer.Email);
+            return Ok(customer.Email); // Assuming the customer object has an Email property
         }
+
     }
 }
