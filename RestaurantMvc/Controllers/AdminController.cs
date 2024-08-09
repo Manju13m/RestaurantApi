@@ -9,7 +9,7 @@ namespace RestaurantMvc.Controllers
         private readonly HttpClient _httpClient;
         public AdminController(IHttpClientFactory httpClientFactory)
         {
-            _httpClient = httpClientFactory.CreateClient("LoginApiClient");
+            _httpClient = httpClientFactory.CreateClient("AdminApiClient");
 
         }
         public async Task<IActionResult> AdminDashboard()
