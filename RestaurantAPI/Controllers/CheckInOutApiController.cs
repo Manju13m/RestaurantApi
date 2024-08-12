@@ -2,6 +2,7 @@
 using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
 using RestaurantAPI.Data;
+using RestaurantAPI.email;
 using RestaurantAPI.Models;
 
 namespace RestaurantAPI.Controllers
@@ -11,10 +12,13 @@ namespace RestaurantAPI.Controllers
     public class CheckInOutApiController : Controller
     {
         private readonly RestaurantDbContext restaurantDbContext;
+        private readonly IEmailService emailService;
 
-        public CheckInOutApiController(RestaurantDbContext restaurantDbContext)
+
+        public CheckInOutApiController(RestaurantDbContext restaurantDbContext, IEmailService emailService)
         {
             this.restaurantDbContext = restaurantDbContext;
+            this.emailService = emailService;
         }
 
         [HttpPost("Checkin")]
@@ -92,6 +96,32 @@ namespace RestaurantAPI.Controllers
                     // Log if no records were saved
                     return StatusCode(StatusCodes.Status500InternalServerError, "No records were saved.");
                 }
+                /*
+
+                // Get the customer's email address based on the UserId
+                var customer = await restaurantDbContext.Customerdata
+                    .FirstOrDefaultAsync(c => c.UserId == model.UserId);
+
+                if (customer == null || string.IsNullOrEmpty(customer.Email))
+                {
+                    return StatusCode(StatusCodes.Status500InternalServerError, "Customer email not found.");
+                }
+
+                // Send an email notification to the customer
+                try
+                {
+                    var subject = "Booking Checkout Confirmation";
+                    var message = $"Dear {customer.FirstName},\n\nThank you for dining with us! \n\nYour gross amount for the recent visit is ₹{model.GrossAmount:N0}. \n\nWe appreciate your patronage. \n\nBest regards, \nTrupthi Restaurant.";
+
+                    await emailService.SendEmailAsync(customer.Email, subject, message);
+                }
+                catch (Exception emailEx)
+                {
+                    // Log the email error (optional) and return an error response
+                    return StatusCode(StatusCodes.Status500InternalServerError, $"Check-out was successful, but an error occurred while sending the email: {emailEx.Message}");
+                }
+
+                */
 
                 return Ok(checkInOut); // Return the updated entity to verify changes
             }
@@ -110,24 +140,39 @@ namespace RestaurantAPI.Controllers
 
 
 
+        /*  [HttpGet("getEmail")]
+          public async Task<ActionResult<string>> GetCustomerEmailByUserId([FromQuery] string userId)
+          {
+              if (string.IsNullOrEmpty(userId))
+              {
+                  return BadRequest("User ID is required.");
+              }
+
+              var customer = await restaurantDbContext.Customerdata
+                  .FirstOrDefaultAsync(c => c.UserId == userId);
+
+              if (customer == null)
+              {
+                  return NotFound("Customer not found.");
+              }
+              //return customer?.Email;
+
+              return Ok(customer.Email); 
+          }*/
+
         [HttpGet("getEmail")]
-        public async Task<ActionResult<string>> GetCustomerEmailByUserId([FromQuery] string userId)
+        public async Task<IActionResult> GetCustomerEmailByUserId([FromQuery] string userId)
         {
-            if (string.IsNullOrEmpty(userId))
+            var emails = await restaurantDbContext.Customerdata
+        .Where(c => c.UserId == userId)
+        .Select(c => c.Email)
+        .ToListAsync();
+            if (emails == null || !emails.Any())
             {
-                return BadRequest("User ID is required.");
+                return NotFound("No emails found for the given user ID.");
             }
 
-            var customer = await restaurantDbContext.Customerdata
-                .FirstOrDefaultAsync(c => c.UserId == userId);
-
-            if (customer == null)
-            {
-                return NotFound("Customer not found.");
-            }
-            //return customer?.Email;
-
-            return Ok(customer.Email); // Assuming the customer object has an Email property
+            return Ok(emails);
         }
         
 

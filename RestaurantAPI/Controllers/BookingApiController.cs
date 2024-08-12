@@ -59,7 +59,7 @@ namespace RestaurantAPI.Controllers
         public async Task<IActionResult> Cancel(Guid bookingId)
         {
             var booking = await restaurantDbContext.Bookingdata
-                .Include(b => b.Customer)  // Assuming you have a Customer relationship
+                .Include(b => b.Customer)  
                 .FirstOrDefaultAsync(b => b.BookingId == bookingId);
 
             if (booking == null)

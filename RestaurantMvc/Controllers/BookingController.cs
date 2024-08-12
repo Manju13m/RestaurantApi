@@ -1,10 +1,8 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
 using RestaurantMvc.email;
 using RestaurantMvc.Models;
 using RestaurantMvc.Models.ViewModels;
-using System.Net.Http;
 using System.Security.Claims;
 using System.Text;
 using System.Text.Json;

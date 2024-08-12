@@ -33,8 +33,8 @@ namespace RestaurantMvc.Controllers
         [HttpPost]
         public async Task<IActionResult> CheckIn(CheckInOutViewModel model)
         {
-           // var json = JsonSerializer.Serialize(model);
-           // var content = new StringContent(json, Encoding.UTF8, "application/json");
+            // var json = JsonSerializer.Serialize(model);
+            // var content = new StringContent(json, Encoding.UTF8, "application/json");
 
             var content = new StringContent(JsonConvert.SerializeObject(model), Encoding.UTF8, "application/json");
 
@@ -44,7 +44,7 @@ namespace RestaurantMvc.Controllers
 
                 if (response.IsSuccessStatusCode)
                 {
-                  
+
                     return RedirectToAction("AdminDashboard", "Admin");
                 }
                 else
@@ -56,7 +56,7 @@ namespace RestaurantMvc.Controllers
             }
             catch (Exception ex)
             {
-                
+
                 ModelState.AddModelError("", $"An error occurred: {ex.Message}");
             }
 
@@ -86,6 +86,47 @@ namespace RestaurantMvc.Controllers
 
                 if (response.IsSuccessStatusCode && response.Content != null)
                 {
+
+
+                    var emailResponse = await _httpClient.GetAsync($"api/yourcontroller/getEmail?userId={model.UserId}");
+                    if (emailResponse.IsSuccessStatusCode)
+                    {
+                        // var emailList = JsonConvert.DeserializeObject<List<string>>(await emailResponse.Content.ReadAsStringAsync());
+                        var emailList = await emailResponse.Content.ReadFromJsonAsync<List<string>>();
+                        // if (emailList != null && emailList.Count > 0)
+                        foreach (var email in emailList)
+                        {
+                            // For simplicity, assuming the first email in the list is the primary email to send to
+                            //var email = emailList.First();
+
+                            // Define the email subject and message
+                            string subject = "Your Checkout Details";
+                            string message = $"Dear Customer,\n\nThank you for your recent visit. Your checkout is complete.\n\nBest regards,\nTrupthi Restaurant";
+
+                            // Send the email
+                            try
+                            {
+                                await _emailService.SendEmailAsync(email, subject, message);
+                            }
+                            catch (Exception emailEx)
+                            {
+                                // Log email sending error
+                                ModelState.AddModelError("", $"Error sending email to {email}: {emailEx.Message}");
+                            }
+                        }
+                      /*  else
+                        {
+                            ModelState.AddModelError("", "No emails were found for the user.");
+                        }*/
+
+                    }
+                    else
+                    {
+                        ModelState.AddModelError("", "Failed to retrieve the customer's email.");
+                    }
+
+
+
                     return RedirectToAction("AdminDashboard", "Admin");
                 }
                 else
@@ -93,7 +134,7 @@ namespace RestaurantMvc.Controllers
                     var errorContent = await response.Content.ReadAsStringAsync();
                     ModelState.AddModelError("", $"{errorContent}");
                 }
-            
+
 
                 /* if (response.IsSuccessStatusCode)
                  {
@@ -134,57 +175,57 @@ namespace RestaurantMvc.Controllers
             return View(model);
         }
 
-        // Method to check if the email address is valid
-       /* private bool IsValidEmail(string email)
-        {
-            try
-            {
-                var mailAddress = new MailAddress(email);
-                return true;
-            }
-            catch (FormatException)
-            {
-                return false;
-            }
-        }
-       */
 
-      /*  private async Task<string> GetCustomerEmailAsync(string userId)
-        {
-            try
-            {
-                var emailResponse = await _httpClient.GetAsync($"api/CheckInOutApi/getEmail?userId={userId}");
+        /* private bool IsValidEmail(string email)
+         {
+             try
+             {
+                 var mailAddress = new MailAddress(email);
+                 return true;
+             }
+             catch (FormatException)
+             {
+                 return false;
+             }
+         }
+        */
 
-                if (emailResponse.IsSuccessStatusCode)
-                {
-                    var email = await emailResponse.Content.ReadAsStringAsync();
+        /*  private async Task<string> GetCustomerEmailAsync(string userId)
+          {
+              try
+              {
+                  var emailResponse = await _httpClient.GetAsync($"api/CheckInOutApi/getEmail?userId={userId}");
 
-                    // Sanitize and validate email
-                    email = email.Trim();
+                  if (emailResponse.IsSuccessStatusCode)
+                  {
+                      var email = await emailResponse.Content.ReadAsStringAsync();
 
-                    // Simple validation to check if the email contains invalid characters
-                    if (email.Contains("\""))
-                    {
-                        throw new FormatException("The email address contains invalid characters.");
-                    }
+                      // Sanitize and validate email
+                      email = email.Trim();
 
-                    return email;
-                }
-                else
-                {
-                    // Handle error if email retrieval fails
-                    var errorContent = await emailResponse.Content.ReadAsStringAsync();
-                    ModelState.AddModelError("", $"Failed to retrieve email: {errorContent}");
-                    return null;
-                }
-            }
-            catch (Exception ex)
-            {
-                // Log and handle the exception
-                ModelState.AddModelError("", $"An error occurred while retrieving email: {ex.Message}");
-                return null;
-            }
-        }*/
+                      // Simple validation to check if the email contains invalid characters
+                      if (email.Contains("\""))
+                      {
+                          throw new FormatException("The email address contains invalid characters.");
+                      }
+
+                      return email;
+                  }
+                  else
+                  {
+                      // Handle error if email retrieval fails
+                      var errorContent = await emailResponse.Content.ReadAsStringAsync();
+                      ModelState.AddModelError("", $"Failed to retrieve email: {errorContent}");
+                      return null;
+                  }
+              }
+              catch (Exception ex)
+              {
+                  // Log and handle the exception
+                  ModelState.AddModelError("", $"An error occurred while retrieving email: {ex.Message}");
+                  return null;
+              }
+          }*/
 
 
 

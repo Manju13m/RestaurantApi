@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using OfficeOpenXml;
 using RestaurantAPI.Data;
+using RestaurantAPI.email;
 using RestaurantAPI.excel;
 using RestaurantAPI.password;
 
@@ -16,6 +17,9 @@ options.UseSqlServer(builder.Configuration.GetConnectionString("RestrauntDbConne
 
 // Register PasswordService as scoped service
 builder.Services.AddScoped<PasswordService>();
+
+//Add email service
+builder.Services.AddScoped<IEmailService, EmailService>();
 
 
 //Add ExcelReportGenerator service

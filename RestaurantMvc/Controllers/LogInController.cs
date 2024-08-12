@@ -2,11 +2,9 @@
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
-using RestaurantMvc.email;
 using System.Security.Claims;
 using System.Text;
 using RestaurantMvc.Models.ViewModels;
-using Microsoft.CSharp.RuntimeBinder;
 using RestaurantMvc.Models;
 
 namespace RestaurantMvc.Controllers
