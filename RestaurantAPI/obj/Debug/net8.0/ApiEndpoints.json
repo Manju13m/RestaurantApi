@@ -1,0 +1,176 @@
+[
+  {
+    "ContainingType": "RestaurantAPI.Controllers.AdminApiController",
+    "Method": "GetAdminDashboardData",
+    "RelativePath": "api/AdminApi/dashboard-data",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RestaurantAPI.Controllers.AdminApiController",
+    "Method": "DownloadBookingsReport",
+    "RelativePath": "api/AdminApi/download-bookings-report",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "startDate",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "endDate",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RestaurantAPI.Controllers.BookingApiController",
+    "Method": "Book",
+    "RelativePath": "api/BookingApi/book",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "addBookRequest",
+        "Type": "RestaurantAPI.Models.ViewModels.AddBookRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RestaurantAPI.Controllers.BookingApiController",
+    "Method": "Cancel",
+    "RelativePath": "api/BookingApi/cancel/{bookingId}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "bookingId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RestaurantAPI.Controllers.BookingApiController",
+    "Method": "GetAdminEmails",
+    "RelativePath": "api/BookingApi/emails",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RestaurantAPI.Controllers.CheckInOutApiController",
+    "Method": "CheckIn",
+    "RelativePath": "api/CheckInOutApi/Checkin",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "RestaurantAPI.Models.CheckInOut",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RestaurantAPI.Controllers.CheckInOutApiController",
+    "Method": "CheckOut",
+    "RelativePath": "api/CheckInOutApi/Checkout",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "RestaurantAPI.Models.CheckInOut",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RestaurantAPI.Controllers.CustomerApiController",
+    "Method": "GetCustomerDashboardData",
+    "RelativePath": "api/CustomerApi/customer-dashboard-data",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RestaurantAPI.Controllers.LoginApiController",
+    "Method": "Login",
+    "RelativePath": "api/LoginApi",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "addLogRequest",
+        "Type": "RestaurantAPI.Models.ViewModels.AddLogRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RestaurantAPI.Controllers.RegisterApiController",
+    "Method": "Register",
+    "RelativePath": "api/RegisterApi",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "addRegRequest",
+        "Type": "RestaurantAPI.Models.ViewModels.AddRegRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RestaurantAPI.Controllers.WeatherForecastController",
+    "Method": "Get",
+    "RelativePath": "WeatherForecast",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[RestaurantAPI.WeatherForecast, RestaurantAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "GetWeatherForecast"
+  }
+]

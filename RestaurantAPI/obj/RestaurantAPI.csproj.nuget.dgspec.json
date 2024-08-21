@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Manju\\source\\repos\\RestaurantAPI\\RestaurantAPI\\RestaurantAPI.csproj": {}
+    "C:\\Users\\manju\\RestaurantApi\\RestaurantAPI\\RestaurantAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Manju\\source\\repos\\RestaurantAPI\\RestaurantAPI\\RestaurantAPI.csproj": {
+    "C:\\Users\\manju\\RestaurantApi\\RestaurantAPI\\RestaurantAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Manju\\source\\repos\\RestaurantAPI\\RestaurantAPI\\RestaurantAPI.csproj",
+        "projectUniqueName": "C:\\Users\\manju\\RestaurantApi\\RestaurantAPI\\RestaurantAPI.csproj",
         "projectName": "RestaurantAPI",
-        "projectPath": "C:\\Users\\Manju\\source\\repos\\RestaurantAPI\\RestaurantAPI\\RestaurantAPI.csproj",
-        "packagesPath": "C:\\Users\\Manju\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Manju\\source\\repos\\RestaurantAPI\\RestaurantAPI\\obj\\",
+        "projectPath": "C:\\Users\\manju\\RestaurantApi\\RestaurantAPI\\RestaurantAPI.csproj",
+        "packagesPath": "C:\\Users\\manju\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\manju\\RestaurantApi\\RestaurantAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Manju\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\manju\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -90,7 +90,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

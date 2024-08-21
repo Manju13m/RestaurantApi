@@ -9,71 +9,71 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = RestaurantMvc
 build_property.RootNamespace = RestaurantMvc
-build_property.ProjectDir = C:\Users\Manju\source\repos\RestaurantAPI\RestaurantMvc\
+build_property.ProjectDir = C:\Users\manju\RestaurantApi\RestaurantMvc\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\Manju\source\repos\RestaurantAPI\RestaurantMvc
+build_property.MSBuildProjectDirectory = C:\Users\manju\RestaurantApi\RestaurantMvc
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/Manju/source/repos/RestaurantAPI/RestaurantMvc/Views/Admin/AdminDashboard.cshtml]
+[C:/Users/manju/RestaurantApi/RestaurantMvc/Views/Admin/AdminDashboard.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWRtaW5EYXNoYm9hcmQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Manju/source/repos/RestaurantAPI/RestaurantMvc/Views/Booking/Book.cshtml]
+[C:/Users/manju/RestaurantApi/RestaurantMvc/Views/Booking/Book.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va2luZ1xCb29rLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Manju/source/repos/RestaurantAPI/RestaurantMvc/Views/CheckInOut/CheckIn.cshtml]
+[C:/Users/manju/RestaurantApi/RestaurantMvc/Views/CheckInOut/CheckIn.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2hlY2tJbk91dFxDaGVja0luLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Manju/source/repos/RestaurantAPI/RestaurantMvc/Views/CheckInOut/CheckOut.cshtml]
+[C:/Users/manju/RestaurantApi/RestaurantMvc/Views/CheckInOut/CheckOut.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2hlY2tJbk91dFxDaGVja091dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Manju/source/repos/RestaurantAPI/RestaurantMvc/Views/Customer/CustomerDashboard.cshtml]
+[C:/Users/manju/RestaurantApi/RestaurantMvc/Views/Customer/CustomerDashboard.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJcQ3VzdG9tZXJEYXNoYm9hcmQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Manju/source/repos/RestaurantAPI/RestaurantMvc/Views/Home/Index.cshtml]
+[C:/Users/manju/RestaurantApi/RestaurantMvc/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Manju/source/repos/RestaurantAPI/RestaurantMvc/Views/Home/Privacy.cshtml]
+[C:/Users/manju/RestaurantApi/RestaurantMvc/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Manju/source/repos/RestaurantAPI/RestaurantMvc/Views/LogIn/AccessDenied.cshtml]
+[C:/Users/manju/RestaurantApi/RestaurantMvc/Views/LogIn/AccessDenied.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9nSW5cQWNjZXNzRGVuaWVkLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Manju/source/repos/RestaurantAPI/RestaurantMvc/Views/LogIn/Log.cshtml]
+[C:/Users/manju/RestaurantApi/RestaurantMvc/Views/LogIn/Log.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9nSW5cTG9nLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Manju/source/repos/RestaurantAPI/RestaurantMvc/Views/Register/Reg.cshtml]
+[C:/Users/manju/RestaurantApi/RestaurantMvc/Views/Register/Reg.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVnaXN0ZXJcUmVnLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Manju/source/repos/RestaurantAPI/RestaurantMvc/Views/Shared/Error.cshtml]
+[C:/Users/manju/RestaurantApi/RestaurantMvc/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Manju/source/repos/RestaurantAPI/RestaurantMvc/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/manju/RestaurantApi/RestaurantMvc/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Manju/source/repos/RestaurantAPI/RestaurantMvc/Views/_ViewImports.cshtml]
+[C:/Users/manju/RestaurantApi/RestaurantMvc/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Manju/source/repos/RestaurantAPI/RestaurantMvc/Views/_ViewStart.cshtml]
+[C:/Users/manju/RestaurantApi/RestaurantMvc/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Manju/source/repos/RestaurantAPI/RestaurantMvc/Views/Shared/_Layout.cshtml]
+[C:/Users/manju/RestaurantApi/RestaurantMvc/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-61opmq6lxf

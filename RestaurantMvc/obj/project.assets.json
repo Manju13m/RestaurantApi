@@ -1758,19 +1758,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Manju\\.nuget\\packages\\": {}
+    "C:\\Users\\manju\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Manju\\source\\repos\\RestaurantAPI\\RestaurantMvc\\RestaurantMvc.csproj",
+      "projectUniqueName": "C:\\Users\\manju\\RestaurantApi\\RestaurantMvc\\RestaurantMvc.csproj",
       "projectName": "RestaurantMvc",
-      "projectPath": "C:\\Users\\Manju\\source\\repos\\RestaurantAPI\\RestaurantMvc\\RestaurantMvc.csproj",
-      "packagesPath": "C:\\Users\\Manju\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Manju\\source\\repos\\RestaurantAPI\\RestaurantMvc\\obj\\",
+      "projectPath": "C:\\Users\\manju\\RestaurantApi\\RestaurantMvc\\RestaurantMvc.csproj",
+      "packagesPath": "C:\\Users\\manju\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\manju\\RestaurantApi\\RestaurantMvc\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Manju\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\manju\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1834,7 +1834,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

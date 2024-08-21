@@ -96,7 +96,7 @@ namespace RestaurantAPI.Controllers
                     // Log if no records were saved
                     return StatusCode(StatusCodes.Status500InternalServerError, "No records were saved.");
                 }
-                /*
+                
 
                 // Get the customer's email address based on the UserId
                 var customer = await restaurantDbContext.Customerdata
@@ -121,7 +121,7 @@ namespace RestaurantAPI.Controllers
                     return StatusCode(StatusCodes.Status500InternalServerError, $"Check-out was successful, but an error occurred while sending the email: {emailEx.Message}");
                 }
 
-                */
+                
 
                 return Ok(checkInOut); // Return the updated entity to verify changes
             }
@@ -138,43 +138,6 @@ namespace RestaurantAPI.Controllers
         }
 
 
-
-
-        /*  [HttpGet("getEmail")]
-          public async Task<ActionResult<string>> GetCustomerEmailByUserId([FromQuery] string userId)
-          {
-              if (string.IsNullOrEmpty(userId))
-              {
-                  return BadRequest("User ID is required.");
-              }
-
-              var customer = await restaurantDbContext.Customerdata
-                  .FirstOrDefaultAsync(c => c.UserId == userId);
-
-              if (customer == null)
-              {
-                  return NotFound("Customer not found.");
-              }
-              //return customer?.Email;
-
-              return Ok(customer.Email); 
-          }*/
-
-        [HttpGet("getEmail")]
-        public async Task<IActionResult> GetCustomerEmailByUserId([FromQuery] string userId)
-        {
-            var emails = await restaurantDbContext.Customerdata
-        .Where(c => c.UserId == userId)
-        .Select(c => c.Email)
-        .ToListAsync();
-            if (emails == null || !emails.Any())
-            {
-                return NotFound("No emails found for the given user ID.");
-            }
-
-            return Ok(emails);
-        }
-        
 
     }
 }
