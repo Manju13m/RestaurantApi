@@ -95,5 +95,18 @@ namespace RestaurantMvc.Controllers
         {
             return View();
         }
+
+        public async Task<IActionResult> LogOut()
+        {
+            // Sign out the user
+            await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+
+            // Clear the user's session
+            HttpContext.Session.Clear();
+
+            // Redirect to the login page (or any other page)
+            return RedirectToAction("Log", "LogIn");
+        }
+
     }
 }

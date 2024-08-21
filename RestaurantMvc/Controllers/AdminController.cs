@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using RestaurantMvc.Models.ViewModels;
 
@@ -12,6 +13,8 @@ namespace RestaurantMvc.Controllers
             _httpClient = httpClientFactory.CreateClient("AdminApiClient");
 
         }
+        [ResponseCache(NoStore = true, Location = ResponseCacheLocation.None)]
+        [Authorize]
         public async Task<IActionResult> AdminDashboard()
         {
             var dashboardData = await GetDashboardDataAsync();

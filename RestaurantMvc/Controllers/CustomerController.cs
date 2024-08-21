@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using RestaurantMvc.Models.ViewModels;
 using System.Net.Http;
@@ -15,6 +16,8 @@ namespace RestaurantMvc.Controllers
             _httpClient = httpClientFactory.CreateClient("CustomerApiClient");
         }
 
+        [ResponseCache(NoStore = true, Location = ResponseCacheLocation.None)]
+        [Authorize]
         public async Task<IActionResult> CustomerDashboard()
         {
             if (!User.Identity.IsAuthenticated)

@@ -1,5 +1,7 @@
 using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.Net.Http.Headers;
 using OfficeOpenXml;
+using RestaurantMvc;
 using RestaurantMvc.email;
 using System.Net.Http.Headers;
 
@@ -93,8 +95,19 @@ builder.Services.AddSession(options =>
 
 
 
-
 var app = builder.Build();
+
+app.Use(async (context, next) =>
+{
+    context.Response.Headers[HeaderNames.CacheControl] = "no-store, no-cache, must-revalidate";
+    context.Response.Headers[HeaderNames.Pragma] = "no-cache";
+    context.Response.Headers[HeaderNames.Expires] = "0";
+    await next();
+});
+
+
+// Add the custom middleware
+//app.UseMiddleware<CustomMiddleware>();
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())

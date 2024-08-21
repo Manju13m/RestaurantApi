@@ -3,6 +3,26 @@
   "WorkspaceRootPath": "C:\\Users\\manju\\RestaurantApi\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{2AC513FC-15C7-4065-BE13-19B0E7E1F115}|RestaurantMvc\\RestaurantMvc.csproj|c:\\users\\manju\\restaurantapi\\restaurantmvc\\custommiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2AC513FC-15C7-4065-BE13-19B0E7E1F115}|RestaurantMvc\\RestaurantMvc.csproj|solutionrelative:restaurantmvc\\custommiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2AC513FC-15C7-4065-BE13-19B0E7E1F115}|RestaurantMvc\\RestaurantMvc.csproj|c:\\users\\manju\\restaurantapi\\restaurantmvc\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2AC513FC-15C7-4065-BE13-19B0E7E1F115}|RestaurantMvc\\RestaurantMvc.csproj|solutionrelative:restaurantmvc\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2AC513FC-15C7-4065-BE13-19B0E7E1F115}|RestaurantMvc\\RestaurantMvc.csproj|c:\\users\\manju\\restaurantapi\\restaurantmvc\\controllers\\customercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2AC513FC-15C7-4065-BE13-19B0E7E1F115}|RestaurantMvc\\RestaurantMvc.csproj|solutionrelative:restaurantmvc\\controllers\\customercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2AC513FC-15C7-4065-BE13-19B0E7E1F115}|RestaurantMvc\\RestaurantMvc.csproj|c:\\users\\manju\\restaurantapi\\restaurantmvc\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2AC513FC-15C7-4065-BE13-19B0E7E1F115}|RestaurantMvc\\RestaurantMvc.csproj|solutionrelative:restaurantmvc\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2AC513FC-15C7-4065-BE13-19B0E7E1F115}|RestaurantMvc\\RestaurantMvc.csproj|c:\\users\\manju\\restaurantapi\\restaurantmvc\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2AC513FC-15C7-4065-BE13-19B0E7E1F115}|RestaurantMvc\\RestaurantMvc.csproj|solutionrelative:restaurantmvc\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{25492854-DB71-4221-906D-850AA0C5762B}|RestaurantAPI\\RestaurantAPI.csproj|c:\\users\\manju\\restaurantapi\\restaurantapi\\controllers\\checkinoutapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{25492854-DB71-4221-906D-850AA0C5762B}|RestaurantAPI\\RestaurantAPI.csproj|solutionrelative:restaurantapi\\controllers\\checkinoutapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -46,11 +66,76 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CustomMiddleware.cs",
+              "DocumentMoniker": "C:\\Users\\manju\\RestaurantApi\\RestaurantMvc\\CustomMiddleware.cs",
+              "RelativeDocumentMoniker": "RestaurantMvc\\CustomMiddleware.cs",
+              "ToolTip": "C:\\Users\\manju\\RestaurantApi\\RestaurantMvc\\CustomMiddleware.cs",
+              "RelativeToolTip": "RestaurantMvc\\CustomMiddleware.cs",
+              "ViewState": "AgIAAAYAAADY/////38twCEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-21T18:50:35.334Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\manju\\RestaurantApi\\RestaurantMvc\\Program.cs",
+              "RelativeDocumentMoniker": "RestaurantMvc\\Program.cs",
+              "ToolTip": "C:\\Users\\manju\\RestaurantApi\\RestaurantMvc\\Program.cs",
+              "RelativeToolTip": "RestaurantMvc\\Program.cs",
+              "ViewState": "AgIAAGUAAAAARjMzMzMLwG0AAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-21T18:26:07.323Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "LogInController.cs",
+              "DocumentMoniker": "C:\\Users\\manju\\RestaurantApi\\RestaurantMvc\\Controllers\\LogInController.cs",
+              "RelativeDocumentMoniker": "RestaurantMvc\\Controllers\\LogInController.cs",
+              "ToolTip": "C:\\Users\\manju\\RestaurantApi\\RestaurantMvc\\Controllers\\LogInController.cs",
+              "RelativeToolTip": "RestaurantMvc\\Controllers\\LogInController.cs",
+              "ViewState": "AgIAADIAAAAAmJmZmZn3v2sAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-21T18:02:25.294Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AdminController.cs",
+              "DocumentMoniker": "C:\\Users\\manju\\RestaurantApi\\RestaurantMvc\\Controllers\\AdminController.cs",
+              "RelativeDocumentMoniker": "RestaurantMvc\\Controllers\\AdminController.cs",
+              "ToolTip": "C:\\Users\\manju\\RestaurantApi\\RestaurantMvc\\Controllers\\AdminController.cs",
+              "RelativeToolTip": "RestaurantMvc\\Controllers\\AdminController.cs",
+              "ViewState": "AgIAAAMAAACAZmZmZiYgwA8AAABOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-21T17:51:42.15Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "CustomerController.cs",
+              "DocumentMoniker": "C:\\Users\\manju\\RestaurantApi\\RestaurantMvc\\Controllers\\CustomerController.cs",
+              "RelativeDocumentMoniker": "RestaurantMvc\\Controllers\\CustomerController.cs",
+              "ToolTip": "C:\\Users\\manju\\RestaurantApi\\RestaurantMvc\\Controllers\\CustomerController.cs",
+              "RelativeToolTip": "RestaurantMvc\\Controllers\\CustomerController.cs",
+              "ViewState": "AgIAAAcAAACAMzMzM/MmwBEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-21T17:50:12.539Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "20240821171010_second migration.cs",
               "DocumentMoniker": "C:\\Users\\manju\\RestaurantApi\\RestaurantAPI\\Migrations\\20240821171010_second migration.cs",
               "RelativeDocumentMoniker": "RestaurantAPI\\Migrations\\20240821171010_second migration.cs",
@@ -58,12 +143,11 @@
               "RelativeToolTip": "RestaurantAPI\\Migrations\\20240821171010_second migration.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-21T17:10:12.884Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-21T17:10:12.884Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 10,
               "Title": "20240807150048_initial migration.cs",
               "DocumentMoniker": "C:\\Users\\manju\\RestaurantApi\\RestaurantAPI\\Migrations\\20240807150048_initial migration.cs",
               "RelativeDocumentMoniker": "RestaurantAPI\\Migrations\\20240807150048_initial migration.cs",
@@ -71,12 +155,11 @@
               "RelativeToolTip": "RestaurantAPI\\Migrations\\20240807150048_initial migration.cs",
               "ViewState": "AgIAAAkAAAAAZWZmZmYDwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-21T17:07:25.256Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-21T17:07:25.256Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 6,
               "Title": "CheckInOutController.cs",
               "DocumentMoniker": "C:\\Users\\manju\\RestaurantApi\\RestaurantMvc\\Controllers\\CheckInOutController.cs",
               "RelativeDocumentMoniker": "RestaurantMvc\\Controllers\\CheckInOutController.cs",
@@ -84,25 +167,23 @@
               "RelativeToolTip": "RestaurantMvc\\Controllers\\CheckInOutController.cs",
               "ViewState": "AgIAAEgAAAAAXGZmZmYFwGoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-09T07:50:27.732Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-09T07:50:27.732Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 5,
               "Title": "CheckInOutApiController.cs",
               "DocumentMoniker": "C:\\Users\\manju\\RestaurantApi\\RestaurantAPI\\Controllers\\CheckInOutApiController.cs",
               "RelativeDocumentMoniker": "RestaurantAPI\\Controllers\\CheckInOutApiController.cs",
               "ToolTip": "C:\\Users\\manju\\RestaurantApi\\RestaurantAPI\\Controllers\\CheckInOutApiController.cs",
               "RelativeToolTip": "RestaurantAPI\\Controllers\\CheckInOutApiController.cs",
-              "ViewState": "AgIAAEwAAAAgAgAAAEAlwIsAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAADoAAACANzMzM7MbwIsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-09T07:47:44.623Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-09T07:47:44.623Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 9,
               "Title": "RestaurantDbContext.cs",
               "DocumentMoniker": "C:\\Users\\manju\\RestaurantApi\\RestaurantAPI\\Data\\RestaurantDbContext.cs",
               "RelativeDocumentMoniker": "RestaurantAPI\\Data\\RestaurantDbContext.cs",
@@ -110,12 +191,11 @@
               "RelativeToolTip": "RestaurantAPI\\Data\\RestaurantDbContext.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-21T17:07:36.975Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-21T17:07:36.975Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 8,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\manju\\RestaurantApi\\RestaurantAPI\\appsettings.json",
               "RelativeDocumentMoniker": "RestaurantAPI\\appsettings.json",
@@ -123,12 +203,11 @@
               "RelativeToolTip": "RestaurantAPI\\appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-08-21T17:07:43.272Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-21T17:07:43.272Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 11,
               "Title": "BookingController.cs",
               "DocumentMoniker": "C:\\Users\\manju\\RestaurantApi\\RestaurantMvc\\Controllers\\BookingController.cs",
               "RelativeDocumentMoniker": "RestaurantMvc\\Controllers\\BookingController.cs",
@@ -140,7 +219,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 12,
               "Title": "BookingApiController.cs",
               "DocumentMoniker": "C:\\Users\\manju\\RestaurantApi\\RestaurantAPI\\Controllers\\BookingApiController.cs",
               "RelativeDocumentMoniker": "RestaurantAPI\\Controllers\\BookingApiController.cs",
@@ -152,7 +231,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 13,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\manju\\RestaurantApi\\RestaurantAPI\\Program.cs",
               "RelativeDocumentMoniker": "RestaurantAPI\\Program.cs",
