@@ -106,8 +106,7 @@ app.Use(async (context, next) =>
 });
 
 
-// Add the custom middleware
-//app.UseMiddleware<CustomMiddleware>();
+
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
