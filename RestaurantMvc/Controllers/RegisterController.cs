@@ -4,6 +4,8 @@ using System.Text;
 using RestaurantMvc.Models.ViewModels;
 using RestaurantMvc.email;
 using Newtonsoft.Json;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authentication;
 
 namespace RestaurantMvc.Controllers
 {
@@ -19,10 +21,16 @@ namespace RestaurantMvc.Controllers
         }
 
         [HttpGet]
-        public IActionResult Reg()
+        public async Task<IActionResult> Reg()
         {
+            if (User.Identity.IsAuthenticated)
+            {
+                await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+                HttpContext.Session.Clear();
+            }
             return View();
         }
+    
 
         [HttpPost]
         [ActionName("Reg")]

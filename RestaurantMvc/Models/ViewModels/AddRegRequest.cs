@@ -30,6 +30,7 @@ namespace RestaurantMvc.Models.ViewModels
 
         [Required(ErrorMessage = "Email is required")]
         [EmailAddress(ErrorMessage = "Invalid Email Address")]
+        [RegularExpression(@"^[^@\s]+@[^@\s]+\.(com|in|net|org|edu)$", ErrorMessage = "Invalid Email Address")]
         public string Email { get; set; }
 
         [Required(ErrorMessage = "Role is required")]
